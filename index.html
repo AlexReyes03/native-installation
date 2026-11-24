@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1e3a8a" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Instalación nativa y cámara</title>
+  </head>
+  <body>
+    <main class="app">
+      <h1>Instalación nativa y cámara</h1>
+
+      <button id="btn-instalar" class="btn" hidden>Instalar aplicación</button>
+      <section id="ios-instrucciones" class="aviso" hidden>
+        <p>Para instalar esta app en tu iPhone:</p>
+        <ol>
+          <li>Toca el botón Compartir de Safari</li>
+          <li>Elige "Agregar a inicio"</li>
+        </ol>
+      </section>
+
+      <section id="pre-permiso" class="aviso">
+        <p>Necesitamos la cámara para mostrar la vista previa. Solo se activa cuando tú lo decides, y puedes cambiar el permiso en cualquier momento desde la configuración del navegador.</p>
+        <button id="btn-activar-camara" class="btn">Activar cámara</button>
+        <p id="mensaje-error" class="error" role="alert" hidden></p>
+      </section>
+
+      <section id="camara" hidden>
+        <video id="video" autoplay playsinline></video>
+        <button id="btn-cambiar" class="btn">Cambiar cámara</button>
+      </section>
+    </main>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
